@@ -1,12 +1,13 @@
-def shop(items, d):
+def shopping(items, discount) -> float:
+    """Adds the prices of every item together. If discount is true, it lowers the total price by 0.1 (ten percent)"""
     total = 0
-    for x in items:
-        total += x
-    if d:
+    for item_price in items:
+        total += item_price
+    if discount == True:
         total = total - (total * 0.1)
     return total
 
 cart = [19.99, 5.49, 12.89, 3.49, 99.99]
-d = True
+discount = True
 
-print(shop(cart, d))
+print(shopping(cart, discount))
